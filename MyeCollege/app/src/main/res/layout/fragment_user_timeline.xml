@@ -1,0 +1,121 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/swipe_container"
+tools:context="com.samratinfosys.myecollege.UserPanel">
+
+<com.samratinfosys.myecollege.views.MyScrollView
+    android:id="@+id/myScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/MyTheme.colors.white"
+            android:paddingBottom="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgUserProfile"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblUserProfileName"
+                android:text="Mohan Sharma"
+                android:paddingTop="0dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_large_1x"
+                android:textStyle="bold"
+                android:textColor="@color/MyTheme.colors.black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lblTimelineStatus"
+                android:text="Mohan Sharma"
+                android:paddingTop="0dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_large"
+                android:textColor="@color/MyTheme.colors.black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@color/MyTheme.colors.white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtNewPostText"
+                    android:background="@drawable/drawable_edit_text"
+                    android:padding="10dp"
+                    android:hint="What are you thinking..."
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnPostNow"
+                    android:layout_gravity="center"
+                    android:text="Post"
+                    android:background="@color/MyTheme.colors.orange"
+                    android:textColor="@color/MyTheme.colors.white"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvTimeline"
+                android:paddingTop="10dp"
+                android:divider="@color/MyTheme.colors.white"
+                android:dividerHeight="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.samratinfosys.myecollege.views.MyScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

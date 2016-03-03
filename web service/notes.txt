@@ -1,0 +1,7 @@
+1. timeline activity (comment, like)
+2. user panel
+3. user timelines
+4. show startup profile generation MyProfile activity
+	-> complete MyProfile activity first
+5. chat methods in database, api etc...
+6. ppt for ipr presentation

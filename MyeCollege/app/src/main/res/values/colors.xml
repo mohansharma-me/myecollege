@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="MyTheme.colors.transparent">#00000000</color>
+    <color name="MyTheme.colors.orange">#EB5502</color>
+    <color name="MyTheme.colors.orangeCC">#CCEB5502</color>
+    <color name="MyTheme.colors.orange44">#44EB5502</color>
+    <color name="MyTheme.colors.orangeAA">#AAEB5502</color>
+    <color name="MyTheme.colors.white">#FFFFFF</color>
+    <color name="MyTheme.colors.whiteAA">#AAFFFFFF</color>
+    <color name="MyTheme.colors.white66">#66FFFFFF</color>
+    <color name="MyTheme.colors.yellow">#EAF200</color>
+    <color name="MyTheme.colors.black">#000000</color>
+    <color name="MyTheme.colors.blackAA">#AA000000</color>
+    <color name="MyTheme.colors.black33">#33000000</color>
+    <color name="MyTheme.colors.black55">#55000000</color>
+
+    <color name="MyTheme.colors.postBorder">@color/MyTheme.colors.black55</color>
+    <color name="MyTheme.colors.postBackground">@color/MyTheme.colors.white</color>
+    <color name="MyTheme.colors.postTextColor">@color/MyTheme.colors.black</color>
+
+    <color name="MyTheme.colors.userProfile.background">@color/MyTheme.colors.blackAA</color>
+    <color name="MyTheme.colors.userProfile.textColor">@color/MyTheme.colors.white</color>
+    <!--<color name="MyTheme.colors.postBorder">@color/MyTheme.colors.orange</color>
+    <color name="MyTheme.colors.postBackground">@color/MyTheme.colors.orangeAA</color>
+    <color name="MyTheme.colors.postTextColor">@color/MyTheme.colors.white</color>-->
+
+</resources>

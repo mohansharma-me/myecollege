@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), local("Roboto-Regular"), url("fontroboto.woff") format("woff");
+}
+* {
+    margin:0px;
+    padding:0px;
+    font: 400 14px/19px Roboto,sans-serif;
+}
+
+.container {
+    margin:0px auto;
+    width:1080px;
+    clear:both;
+}
+
+a {
+    color:black;
+}
+a:hover {
+    text-decoration:none;
+}
+
+.header-wrapper .header {
+    min-height:40px;
+    background: none repeat scroll 0% 0% #F9F9F9;
+    border-bottom: 1px solid #F80;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.header-wrapper .header:after {
+    content:" ";
+    clear:both;
+    display:block;
+}
+.header-wrapper .header .left, .header .right {
+    padding:10px;
+}
+.header-wrapper .header a.mainlink {
+    text-decoration:none;
+    font-size:16px;
+}
+.header-wrapper .header a.mainlink img {
+    margin-right:10px;
+}
+.header-wrapper .header .right label.title{
+    font-size:14px;
+}
+.header-wrapper .header img{
+    width:32px;
+    border:0px;
+    vertical-align: middle;
+}
+
+.header-wrapper .path {
+    font-size:12px;
+    padding:10px;
+    color:gray;
+}
+.header-wrapper .path a {
+    font-size:12px;
+    color:gray;
+    text-decoration:none;
+}
+
+.content {
+    padding:10px 0px 10px 0px;
+}
+.content:after {
+    content:" ";
+    clear:both;
+    display:block;
+}
+
+.content .left_sidebar {
+    width:20%;
+}
+.content .left_frame {
+    width:80%;
+}
+
+.content .navigation {
+    
+}
+
+.content .navigation ul {
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    width:90%;
+}
+.content .navigation ul li a{
+    display:block;
+    padding:10px;
+    background:#eee;
+    margin-bottom:2px;
+    text-decoration: none;
+}
+
+.content .navigation ul li a img{
+    float:right;
+    width:18px;
+    border:0px;
+}
+
+.content .navigation ul li ul {
+    display:none;
+    width:100%;
+}
+
+.content .navigation ul li.current a{
+    background:#ccc;
+}
+
+.content .navigation ul li ul li a{
+    background:#ddd!important;
+}
+
+
+h1 {font-size:20px}
+h1.title {
+    padding:5px;
+    padding-bottom:10px;
+    border-bottom:1px solid #09C;
+    margin-bottom:5px;
+}
+
+a.button {
+    display:block;
+    padding:10px;
+    background:#09c;
+    color:white;
+    text-align: center;
+    max-width:120px;
+}
+
+.footer {
+    border-top: 1px solid #F80;
+    padding:10px;
+}
+
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+
+.links a {
+    font-size:12px;
+}
+
+form input,form select {
+    padding:5px;
+    margin:2px;
+    border:1px solid #F80;
+}
+form input[type="submit"],form input[type="button"] {
+    background-color: #09C;
+    color:white;
+    border:1px solid black;
+}
+
+form.full-width input[type="text"],form.full-width select{
+    width:100%;
+}
+
+table tr td {
+	padding:5px;
+}

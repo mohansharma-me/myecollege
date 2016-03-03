@@ -1,0 +1,196 @@
+college
+	cl_id
+	cl_short_name
+	cl_full_name
+	cl_city
+	cl_fax_number
+	cl_email_address
+	cl_telephone_number
+	cl_website
+	cl_logo
+	cl_code
+	cl_administrator_password
+	
+	sqlite: create table if not exists college(college_id integer primary key, college_short_name text, college_full_name text, college_city text, college_fax_number text, college_email_address text, college_telephone_number text, college_website text, college_code text)
+
+account
+	ac_id
+	ac_type (faculty, student)
+	ac_name
+	ac_user_id
+	ac_email_address
+	ac_mobile_number
+	ac_activation_code (unique code)
+	ac_activation_status (activation status = activated, deactivated, not_activated)
+	ac_password
+	ac_avtar
+	ac_cl_id
+	
+	sqlite: create table if not exists account(account_id integer primary key, account_type text, account_name text, account_user_id text, account_email_address text, account_mobile_number text, account_activation_status text, account_college_id integer)
+
+
+timeline
+	tl_id
+	tl_pr_id
+	tl_cl_id
+	tl_type (text, image, audio, video)
+	tl_timestamp
+	tl_security_data
+	tl_data
+	
+	sqlite: create table if not exists timeline(timeline_id integer primary key, timeline_profile_id integer, timeline_college_id integer, timeline_type integer, timeline_timestamp timestamp, timeline_security_data text, timeline_data text)
+
+	
+profile
+	pr_id
+	pr_ac_id
+	pr_first_name
+	pr_last_name
+	pr_mobile_number
+	pr_email_address
+	pr_tl_status
+	pr_date_of_birth
+	pr_address
+	pr_gender
+	pr_semester
+	
+	sqlite: create table if not exists profile(profile integer primary key, profile_account_id integer, profile_first_name text, profile_last_name text, profile_mobile_number text, profile_email_address text, profile_timeline_status text, profile_dateofbirth date, profile_address text, profile_gender text, profile_semester int)
+
+likedislike
+	ld_id
+	ld_tl_id
+	ld_cm_id
+	ld_likes (mv)
+	ld_dislikes (mv)
+	
+comment
+	cm_id
+	cm_tl_id
+	cm_pr_id
+	cm_data
+
+chat
+	ch_id
+	ch_propogation_type (unicast, multicast, broadcast)
+	ch_from_id
+	ch_to_id (if multicast then it's behaves as group_id)
+	ch_timestamp
+	ch_security_data
+	ch_message_type (text, image, audio, video)
+	ch_message
+	
+	sqlite: create table if not exists chat(chat_id integer primary key, chat_propogation_type int, chat_from_id integer, chat_to_id integer, chat_timestamp timestamp, chat_security_data text, chat_message_type int, chat_message text)
+
+group
+	gr_id
+	gr_owner_pr_id
+	gr_title
+	gr_buddies
+	gr_security_data
+	gr_picture
+	-gr_cl_id
+
+alert
+	al_id
+	al_faculty_pr_id
+	al_pr_ids
+	al_datetime
+	al_data
+
+guest
+	gu_id
+	gu_cl_id
+	gu_datetime
+	gu_linktype (weblink, modulelink, notification)
+	gu_datatype (text, image, audio, video)
+	gu_security_data
+	gu_data
+
+timetable
+	tt_id
+	tt_cl_id
+	tt_department_code
+	tt_semester
+	tt_datetime
+	tt_data
+
+dailynote
+	dn_id
+	dn_faculty_pr_id
+	dn_tt_id
+	dn_tt_sl_id [text]
+	dn_title
+	dn_description
+	dn_datetime
+	dn_data
+
+result
+	re_id
+	re_cl_id
+	re_department_code
+	re_semester
+	re_title
+	re_datetime
+	re_data
+
+dataentrysession
+	des_id
+	-des_cl_id
+	des_faculty_pr_id
+	des_buddies
+	des_group_buddies
+	des_datetime
+	des_title
+	des_description
+	des_note
+	des_data
+	des_security_data
+
+attendance
+	at_id
+	at_tt_id
+	at_tt_sl_id
+	at_data
+
+leave
+	le_id
+	le_al_id
+
+activity
+	act_id
+	act_cl_id
+	act_faculty_pr_id
+	act_type (event, general, placement)
+	act_title
+	act_description
+	act_datetime
+	act_last_datetime
+	act_data
+	act_security_data
+
+_department
+	_de_id
+	_de_name
+	_de_code
+	_de_adder_cl_id
+
+_stream
+	_st_id
+	_st_name
+	_st_code
+	_st_adder_cl_id
+
+noticeboard
+	nb_id
+	nb_faculty_pr_id
+	nb_datetime
+	nb_title
+	nb_department_code
+	nb_semester
+	nb_data
+
+connection
+	co_id
+	co_pr_id
+	co_friend_pr_id
+	co_isblocked

@@ -1,0 +1,202 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.samratinfosys.myecollege.CollegePanel">
+
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/holderLoader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/holderCollegeProfile"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <AbsoluteLayout
+                        android:id="@+id/layoutAbsolute"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent">
+
+                        <ImageView
+                            android:id="@+id/imgBigPicture"
+                            android:layout_x="0px"
+                            android:layout_y="0px"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/btnCollegeInfo"
+                            android:layout_x="0px"
+                            android:layout_y="0px"
+                            android:padding="10dp"
+                            android:background="@drawable/drawable_collegeoverview"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent">
+
+                            <TextView
+                                android:id="@+id/lblCollegeName"
+                                android:text="Government Engineering College, Rajkot"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/font_size_large"
+                                android:textColor="@color/MyTheme.colors.white"
+                                android:layout_width="match_parent"
+                                android:paddingBottom="10dp"
+                                android:lines="2"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lblCollegeEmail"
+                                android:text="mail@gec"
+                                android:textColor="@color/MyTheme.colors.white"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:paddingBottom="5dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lblCollegeFax"
+                                android:text="8888888888"
+                                android:textColor="@color/MyTheme.colors.white"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:paddingBottom="5dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lblCollegeTelephone"
+                                android:text="9999999999"
+                                android:textColor="@color/MyTheme.colors.white"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/lblCollegeWebsite"
+                                    android:text="www.gecrajkot.org"
+                                    android:textColor="@color/MyTheme.colors.white"
+                                    android:textStyle="bold"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:singleLine="true"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:id="@+id/lblCollegeCity"
+                                    android:text="Rajkot"
+                                    android:layout_gravity="right"
+                                    android:textStyle="bold"
+                                    android:gravity="right"
+                                    android:textColor="@color/MyTheme.colors.white"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:singleLine="true"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </AbsoluteLayout>
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progress="0"
+                        android:layout_alignBottom="@+id/layoutAbsolute"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/progressbar_height_line"
+                        android:id="@+id/pbPosterImage" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/lblSwipeDownNote"
+                    android:text="Swipe down to refresh"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="7">
+
+                    <RelativeLayout
+                        android:id="@+id/holderTimelineLoader"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:background="@drawable/hourglass"
+                            android:scaleType="centerInside"
+                            android:layout_gravity="center"
+                            android:padding="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/lvTimeline"
+                        android:divider="@color/MyTheme.colors.white"
+                        android:dividerHeight="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent">
+                    </ListView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

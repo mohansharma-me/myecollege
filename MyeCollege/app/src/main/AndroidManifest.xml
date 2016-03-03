@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.samratinfosys.myecollege" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyTheme" >
+        <activity
+            android:name=".Boot"
+            android:label="@string/title_activity_boot"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CollegeSelection"
+            android:label="@string/title_activity_college_selection"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme" >
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"
+            android:parentActivityName=".CollegeSelection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.CollegeSelection" />
+        </activity>
+        <activity
+            android:name=".Activation"
+            android:label="@string/title_activity_activation"
+            android:parentActivityName=".Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.Login" />
+        </activity>
+        <activity
+            android:name=".CollegePanel"
+            android:label="@string/title_activity_college_panel"
+            android:launchMode="singleTop"
+            android:parentActivityName=".CollegeSelection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.CollegeSelection" />
+        </activity>
+        <activity
+            android:name=".CollegeInfo"
+            android:label="@string/title_activity_college_info"
+            android:parentActivityName=".CollegePanel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.CollegePanel" />
+        </activity>
+        <activity
+            android:name=".MyUserPanel"
+            android:label="@string/title_activity_user_panel"
+            android:parentActivityName=".CollegeSelection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.CollegeSelection" />
+        </activity>
+
+        <service
+            android:name=".services.MyeCollegeService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".MyProfile"
+            android:label="@string/title_activity_my_profile"
+            android:parentActivityName=".UserPanel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserPanel" />
+        </activity>
+        <activity
+            android:name=".UserPanel"
+            android:label="@string/title_activity_temp"
+            android:parentActivityName=".CollegeSelection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.CollegeSelection" />
+        </activity>
+        <activity
+            android:name=".MyFriends"
+            android:label="@string/title_activity_my_friends"
+            android:parentActivityName=".UserPanel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samratinfosys.myecollege.UserPanel" />
+        </activity>
+    </application>
+
+</manifest>

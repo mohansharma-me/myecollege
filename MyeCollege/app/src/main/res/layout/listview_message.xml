@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/listview_message_image"
+            android:scaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/listview_message_title"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:textColor="@color/MyTheme.colors.black"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/listview_message_heading"
+            android:textColor="@color/MyTheme.colors.blackAA"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:ellipsize="middle"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

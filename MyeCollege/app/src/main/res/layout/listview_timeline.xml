@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/drawable_timeline"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblTimelineID"
+            android:visibility="gone"
+            android:textColor="@color/MyTheme.colors.postTextColor"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/lblHeading"
+            android:text="Heading"
+            android:maxLines="2"
+            android:textColor="@color/MyTheme.colors.postTextColor"
+            android:textSize="@dimen/font_size_large"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgTimelineImage"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:maxHeight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lblTimelineText"
+            android:text="Data Text"
+            android:maxLines="5"
+            android:textColor="@color/MyTheme.colors.postTextColor"
+            android:textSize="@dimen/font_size_big"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lblTimelineTime"
+            android:text="21/04/2015 12:00 AM"
+            android:maxLines="1"
+            android:layout_gravity="right"
+            android:textColor="@color/MyTheme.colors.postTextColor"
+            android:textSize="@dimen/font_size_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

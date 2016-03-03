@@ -1,0 +1,145 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.samratinfosys.myecollege.CollegeSelection">
+
+    <ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/sessionControl_holderUserOptions"
+                android:orientation="horizontal"
+                android:background="@color/MyTheme.colors.orange"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/user_login_msg"
+                    android:textColor="@color/MyTheme.colors.white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sessionControl_holderUserCollege"
+                android:orientation="horizontal"
+                android:background="@color/MyTheme.colors.orange"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/sessionControl_btnUserProfile"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgUserProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/lblAccountName"
+                        android:layout_width="match_parent"
+                        android:text="Mr. X"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:textColor="@color/MyTheme.colors.white"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sessionControl_btnUserCollege"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgCollegeLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/lblCollegeName"
+                        android:layout_width="match_parent"
+                        android:text="GEC Rajkot"
+                        android:singleLine="true"
+                        android:textColor="@color/MyTheme.colors.white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pbGeneral"
+                android:layout_width="match_parent"
+                android:indeterminateOnly="true"
+                android:visibility="gone"
+                android:progress="100"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/holderCollegeListView"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lblSwipeDownNote"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="Swipe down to refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ListView
+                    android:id="@+id/lvColleges"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+
+                </ListView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

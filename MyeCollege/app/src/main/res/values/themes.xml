@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTheme.NoActionBar" parent="@style/MyTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="MyTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/MyTheme.ActionBar</item>
+
+        <item name="android:buttonStyle">@style/MyTheme.Button</item>
+
+        <item name="android:actionMenuTextColor">@color/MyTheme.colors.white</item>
+        <item name="actionMenuTextColor">@color/MyTheme.colors.white</item>
+
+
+    </style>
+
+    <style name="MyTheme.ProgressBar.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="MyTheme.Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/mytheme_button_selector</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="MyTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/MyTheme.colors.orange</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.Title.TextAppearance</item>
+        <item name="android:subtitleTextStyle">@style/MyTheme.ActionBar.SubTitle.TextAppearance</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+        <item name="background">@color/MyTheme.colors.orange</item>
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.Title.TextAppearance</item>
+        <item name="subtitleTextStyle">@style/MyTheme.ActionBar.SubTitle.TextAppearance</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.Title.TextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/MyTheme.colors.white</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.SubTitle.TextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/MyTheme.colors.white</item>
+    </style>
+
+
+</resources>
